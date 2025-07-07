@@ -1,12 +1,3 @@
-/* 
-pseudocode:
-- Create a prompt to ask the user for their choice (rock, paper, or scissors)
-- Generate a random choice for the computer (rock, paper, or scissors)
-- Compare the user's choice with the computer's choice
-- Determine the winner based on the rules of rock-paper-scissors
-- Display a message telling the user wether he won, lost or tied
-- Ask the user if he wants to play again
-*/
 const choices = ["rock", "paper", "scissors"];
 
 function askForChoice(){
@@ -62,5 +53,13 @@ function announcement(){
         alert("You have lost :(")
     } else{
         alert("It's a tie")
+    }
+    playAgain();
+}
+
+function playAgain(){
+    const decision = confirm("Do you want to play again ? :3");
+    if (decision){
+        return(announcement());
     }
 }
