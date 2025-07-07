@@ -6,3 +6,4 @@ Pseudo code:
 - Determine the winner based on the rules of rock-paper-scissors
 - Display a message telling the user wether he won, lost or tied
 - Ask the user if he wants to play again
+- Create a score board

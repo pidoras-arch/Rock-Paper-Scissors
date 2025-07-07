@@ -1,4 +1,6 @@
 const choices = ["rock", "paper", "scissors"];
+let userScore = 0;
+let computerScore = 0;
 
 function askForChoice(){
     let choice = prompt("Enter your choice 'paper, rock, or scissors'").toLowerCase();
@@ -48,8 +50,10 @@ function determineWinner(){
 function announcement(){
     let result = determineWinner();
     if (result === "win"){
+        userScore+=1;
         alert("You have won!");
     } else if (result === "lose"){
+        computerScore+=1;
         alert("You have lost :(")
     } else{
         alert("It's a tie")
@@ -58,7 +62,7 @@ function announcement(){
 }
 
 function playAgain(){
-    const decision = confirm("Do you want to play again ? :3");
+    const decision = confirm(`Your score : ${userScore}\nComputer score : ${computerScore}\nDo you want to play again ? :3`);
     if (decision){
         return(announcement());
     }
