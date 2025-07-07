@@ -49,3 +49,14 @@ function determineWinner(){
     }
     return result;
 }
+
+function announcement(){
+    let result = determineWinner();
+    if (result === "win"){
+        alert("You have won!");
+    } else if (result === "lose"){
+        alert("You have lost :(")
+    } else{
+        alert("It's a tie")
+    }
+}
