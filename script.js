@@ -11,6 +11,10 @@ const choices = ["rock", "paper", "scissors"];
 
 function askForChoice(){
     let choice = prompt("Enter your choice 'paper, rock, or scissors'").toLowerCase();
+    if (!choices.includes(choice)){
+        alert("invalid input, try again");
+        return askForChoice();
+    }
     return choice;
 }
 
