@@ -7,12 +7,13 @@ pseudocode:
 - Display a message telling the user wether he won, lost or tied
 - Ask the user if he wants to play again
 */
-const choices = ["rock", "paper", "scissors"]
+const choices = ["rock", "paper", "scissors"];
 
 function askForChoice(){
-    return prompt("Enter your choice 'paper, rock, or scissors'").toLowerCase;
+    let choice = prompt("Enter your choice 'paper, rock, or scissors'").toLowerCase();
+    return choice;
 }
 
-function computerCoice(){
+function computerChoice(){
     return choices[Math.floor(Math.random() * choices.length)];
 }
