@@ -12,3 +12,7 @@ const choices = ["rock", "paper", "scissors"]
 function askForChoice(){
     return prompt("Enter your choice 'paper, rock, or scissors'").toLowerCase;
 }
+
+function computerCoice(){
+    return choices[Math.floor(Math.random() * choices.length)];
+}
