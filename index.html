@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class = "headerContainer">
-        <div class = "scoreBoard">
-            <div id = "userScore">You: </div>
-            <div id = "computerScore">Computer: </div>
-        </div>
-    </div>
-    <div class = "bodyContainer">
-        <div class = "userChoice">
-            <button id = "rock">Rock</button>
-            <button id = "paper">Paper</button>
-            <button id = "scissors">Scissors</button>
-        </div>
+    <div class="bodyContainer">
+        <dev class = "scoreBoard">
+            <div class = "user">
+                <div id = "userName">You</div>
+                <div id = "userScore">0</div>
+            </div>
+            <div class = "computer">
+                <div id = "computerName">Computer</div>
+                <div id = "computerScore">0</div>
+            </div>
+        </dev>
+        <div class = "playArea">
+            <div class = "userChoice">
+                <button id = "rock">Rock</button>
+                <button id = "paper">Paper</button>
+                <button id = "scissors">Scissors</button>
+            </div>
         <div class = "result"></div>
     </div>
 </body>

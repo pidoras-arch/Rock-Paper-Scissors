@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+}
+.bodyContainer{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px;
+}
+.scoreBoard{
+    background-color: antiquewhite;
+    border: solid 1px;
+    display: flex;  
+    justify-content: space-around;
+    height: 60px;
+}
+.user, .computer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.playArea{
+    align-self: center;
+}
