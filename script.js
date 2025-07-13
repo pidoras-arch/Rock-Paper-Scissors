@@ -1,24 +1,20 @@
 const choices = ["rock", "paper", "scissors"];
 let userScore = 0;
 let computerScore = 0;
+let userSelection;
 
-function askForChoice(){
-    let choice = prompt("Enter your choice 'paper, rock, or scissors'").toLowerCase();
-    if (!choices.includes(choice)){
-        alert("invalid input, try again");
-        return askForChoice();
-    }
-    return choice;
-}
+let userChoice = document.querySelector(".userChoice");
+userChoice.addEventListener("click",(event)=>{
+    let target = event.target;
+    announcement(target.id);
+});
 
 function computerChoice(){
     return choices[Math.floor(Math.random() * choices.length)];
 }
 
-
-function determineWinner(){
+function determineWinner(userchoice){
     let result;
-    let userchoice = askForChoice();
     let computerchoice = computerChoice()
     switch(userchoice){
         case("rock"):
@@ -47,8 +43,8 @@ function determineWinner(){
     return result;
 }
 
-function announcement(){
-    let result = determineWinner();
+function announcement(userchoice){
+    let result = determineWinner(userchoice);
     if (result === "win"){
         userScore+=1;
         alert("You have won!");
