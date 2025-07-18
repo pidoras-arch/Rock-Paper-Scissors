@@ -53,17 +53,23 @@ function determineWinner(userchoice){
 }
 
 function userWin(){
+    announce.style.border = "solid black"
     announce.style.backgroundColor = "green";
+    announce.style.color = "white"
     announce.textContent = "BINGO!";
     userScore.textContent = parseInt(userScore.textContent) + 1;
 }
 function computerWin(){
+    announce.style.border = "solid black"
     announce.style.backgroundColor = "red";
+    announce.style.color = "white"
     announce.textContent = "Hard luck :(";
     computerScore.textContent = parseInt(computerScore.textContent) + 1;
 }
 function tie(){
+    announce.style.border = "solid black"
     announce.style.backgroundColor = "yellow";
+    announce.style.color = "black"
     announce.textContent = "Tie :3";
 }
 function result(){
