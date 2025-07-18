@@ -76,11 +76,12 @@ function result(){
     playAgainButton.textContent = "Play again"
     playArea.appendChild(result);
     playArea.appendChild(playAgainButton);
+    playAgainButton.addEventListener("click",()=> playAgain());
     parseInt(userScore.textContent) > parseInt(computerScore.textContent) ?
         result.textContent = "Congrats, You have won the game!"
         : result.textContent = "Unfortunatlly, You have lost the game.";
 }
 
 function playAgain(){
-    playAgainButton.addEventListener("click",()=>location.reload())
+    location.reload();
 }
