@@ -1,15 +1,21 @@
 *{
     margin: 0;
+    font-size: large;
+}
+.body{
+    background-color: #B3B492;
 }
 .bodyContainer{
+    margin: 50px;
     background-color: white;
     display: flex;
     flex-direction: column;
     border: solid 1px;
 }
 .scoreBoard{
-    background-color: antiquewhite;
-    border: solid 1px;
+    font-weight: bold;
+    color: white;
+    background-color: #6F686D;
     display: flex;  
     justify-content: space-around;
     height: 60px;
@@ -20,5 +26,33 @@
     align-items: center;
 }
 .playArea{
-    align-self: center;
+    flex-wrap: wrap;
+    display: flex   ;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: #D8D0C1;
+    width: 100%;
+    height: 700px;
+}
+.doIt{
+    font-size: xx-large;
+}
+.userChoice{
+    border: solid 1px;
+}
+button{
+    background-color: #E0D3DE;
+    height: 200px;
+    width: 300px;
+    margin: 10px;
+    font-size:xxx-large;
+    border-radius: 10px;
+    border: solid 1px;
+}
+
+.result{
+    border: solid 1px;
+    font-size: xx-large;
+    padding: 10px 200px 10px 200px;
 }

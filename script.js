@@ -1,12 +1,12 @@
 const choices = ["rock", "paper", "scissors"];
-let userScore = 0;
-let computerScore = 0;
-let userSelection;
+let userScore = document.querySelector("#userScore");
+let computerScore = document.querySelector("#computerScore");
 
+let announce = document.querySelector(".result");
 let userChoice = document.querySelector(".userChoice");
 userChoice.addEventListener("click",(event)=>{
     let target = event.target;
-    announcement(target.id);
+    determineWinner(target.id);
 });
 
 function computerChoice(){
@@ -19,42 +19,39 @@ function determineWinner(userchoice){
     switch(userchoice){
         case("rock"):
             if (computerchoice === "scissors"){
-                result = "win";
+                userWin();
             } else if (computerchoice === "paper"){
-                result = "lose";
+                computerWin();
             }
             break;
         case("paper"):
             if (computerchoice === "scissors"){
-                result = "lose";
+                computerWin();
             } else if (computerchoice === "paper"){
-                result = "win";
+                userWin();
             }
             break;
 
         case("scissors"):
             if (computerchoice === "paper"){
-                result = "win";
+                userWin();
             } else if(computerchoice === "rock"){
-                result = "lose";
+                computerWin();
             }
             break;
     }
     return result;
 }
 
-function announcement(userchoice){
-    let result = determineWinner(userchoice);
-    if (result === "win"){
-        userScore+=1;
-        alert("You have won!");
-    } else if (result === "lose"){
-        computerScore+=1;
-        alert("You have lost :(")
-    } else{
-        alert("It's a tie")
-    }
-    playAgain();
+function userWin(){
+    announce.style.backgroundColor = "green";
+    announce.textContent = "BINGO!";
+    userScore.textContent = parseInt(userScore.textContent) + 1;
+}
+function computerWin(){
+    announce.style.backgroundColor = "red";
+    announce.textContent = "Hard luck :(";
+    computerScore.textContent = parseInt(computerScore.textContent) + 1;
 }
 
 function playAgain(){
