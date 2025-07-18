@@ -22,6 +22,8 @@ function determineWinner(userchoice){
                 userWin();
             } else if (computerchoice === "paper"){
                 computerWin();
+            } else{
+                tie();
             }
             break;
         case("paper"):
@@ -29,6 +31,8 @@ function determineWinner(userchoice){
                 computerWin();
             } else if (computerchoice === "paper"){
                 userWin();
+            } else{
+                tie();
             }
             break;
 
@@ -37,6 +41,8 @@ function determineWinner(userchoice){
                 userWin();
             } else if(computerchoice === "rock"){
                 computerWin();
+            } else{
+                tie();
             }
             break;
     }
@@ -52,6 +58,10 @@ function computerWin(){
     announce.style.backgroundColor = "red";
     announce.textContent = "Hard luck :(";
     computerScore.textContent = parseInt(computerScore.textContent) + 1;
+}
+function tie(){
+    announce.style.backgroundColor = "yellow";
+    announce.textContent = "Tie :3";
 }
 
 function playAgain(){
