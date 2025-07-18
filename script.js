@@ -1,7 +1,9 @@
 const choices = ["rock", "paper", "scissors"];
+let playArea = document.querySelector(".playArea");
+let doIt = document.querySelector(".doIt");
+let interface = document.querySelector(".userChoice");
 let userScore = document.querySelector("#userScore");
 let computerScore = document.querySelector("#computerScore");
-
 let announce = document.querySelector(".result");
 let userChoice = document.querySelector(".userChoice");
 userChoice.addEventListener("click",(event)=>{
@@ -14,7 +16,6 @@ function computerChoice(){
 }
 
 function determineWinner(userchoice){
-    let result;
     let computerchoice = computerChoice()
     switch(userchoice){
         case("rock"):
@@ -46,7 +47,9 @@ function determineWinner(userchoice){
             }
             break;
     }
-    return result;
+    if(parseInt(userScore.textContent) + parseInt(computerScore.textContent) == 5){
+        result();
+    }
 }
 
 function userWin(){
@@ -63,10 +66,21 @@ function tie(){
     announce.style.backgroundColor = "yellow";
     announce.textContent = "Tie :3";
 }
+function result(){
+    playArea.removeChild(doIt);
+    playArea.removeChild(interface);
+    playArea.removeChild(announce);
+    const result = document.createElement("div");
+    const playAgainButton = document.createElement("button");
+    result.classList.add("doIt")
+    playAgainButton.textContent = "Play again"
+    playArea.appendChild(result);
+    playArea.appendChild(playAgainButton);
+    parseInt(userScore.textContent) > parseInt(computerScore.textContent) ?
+        result.textContent = "Congrats, You have won the game!"
+        : result.textContent = "Unfortunatlly, You have lost the game.";
+}
 
 function playAgain(){
-    const decision = confirm(`Your score : ${userScore}\nComputer score : ${computerScore}\nDo you want to play again ? :3`);
-    if (decision){
-        return(announcement());
-    }
+    playAgainButton.addEventListener("click",()=>location.reload())
 }
