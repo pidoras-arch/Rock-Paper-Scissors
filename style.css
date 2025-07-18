@@ -10,7 +10,6 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    border: solid 1px;
 }
 .scoreBoard{
     font-weight: bold;
@@ -38,9 +37,6 @@
 .doIt{
     font-size: xx-large;
 }
-.userChoice{
-    border: solid 1px;
-}
 button{
     background-color: #E0D3DE;
     height: 200px;
@@ -52,7 +48,6 @@ button{
 }
 
 .result{
-    border: solid 1px;
     font-size: xx-large;
     padding: 10px 200px 10px 200px;
 }
